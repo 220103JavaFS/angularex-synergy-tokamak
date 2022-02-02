@@ -9,6 +9,7 @@ export class JoelPageComponent implements OnInit {
   pokemonList: any[] = [];
   pokemon: any = '';
   url: string = 'https://pokeapi.co/api/v2/pokemon/249';
+  input: string = '';
 
   async getPokemon() {
     var response = await fetch('https://pokeapi.co/api/v2/pokemon/249', {
@@ -51,6 +52,15 @@ export class JoelPageComponent implements OnInit {
     });
 
     pokemon = await response.json();
+    this.pokemonList.push(pokemon);
+  }
+
+  async getAnother(inputString:string){
+    var response = await fetch(`https://pokeapi.co/api/v2/pokemon/${inputString}`, {
+      method: 'GET',
+    });
+
+    var pokemon = await response.json();
     this.pokemonList.push(pokemon);
   }
 
