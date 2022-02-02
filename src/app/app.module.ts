@@ -8,7 +8,7 @@ import { JoelPageComponent } from './components/joel-page/joel-page.component';
 import { FormsModule } from '@angular/forms';
 import { MattPageComponent } from './components/matt-page/matt-page.component';
 
-import { BERHEProfileComponent } from './berhe-profile/berhe-profile.component';
+import { BERHEProfileComponent } from './components/berhe-profile/berhe-profile.component';
 
 import { MerryComponent } from './components/merry/merry.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -18,14 +18,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   declarations: [
     AppComponent,
     JoelPageComponent,
-
     MattPageComponent,
-
-    BERHEProfileComponent,
-
     MerryComponent,
-      NavbarComponent,
-
+    NavbarComponent,
+    BERHEProfileComponent
   ],
   imports: [
     BrowserModule,
