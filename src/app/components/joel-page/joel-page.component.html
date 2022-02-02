@@ -4,18 +4,28 @@
 <ul id="list">
   <li>Video Games</li>
   <ul>
-      <li>FPS</li>
-      <li>Openworld RPG</li>
-      <li>Post-Apocalyptic</li>
-      <li>League</li>
+    <li>FPS</li>
+    <li>Openworld RPG</li>
+    <li>Post-Apocalyptic</li>
+    <li>League</li>
   </ul>
   <li>Computer Building</li>
   <li>Digital Art / Concept Art</li>
   <li>Electronic Music</li>
-  <li></li>
 </ul>
 <label for="quote">Quote:</label>
 <p id="quote">
   One doesn't discover new lands without consenting to lose sight of the shore
   for a very long time. -Andre Gide
 </p>
+
+<p>Favorite Pokemon</p>
+<div class="container border border-dark">
+  <div class="d-table">
+    <div class="d-table-cell" *ngFor="let pokemon of pokemonList">
+      <img src="{{ pokemon.sprites.front_default }}" alt="" />
+      <p>{{ pokemon.species.name }}</p>
+      <p *ngFor="let type of pokemon.types">{{ type.type.name }}</p>
+    </div>
+  </div>
+</div>
