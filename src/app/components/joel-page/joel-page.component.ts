@@ -56,6 +56,7 @@ export class JoelPageComponent implements OnInit {
   }
 
   async getAnother(inputString:string){
+    
     var response = await fetch(`https://pokeapi.co/api/v2/pokemon/${inputString}`, {
       method: 'GET',
     });

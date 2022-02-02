@@ -19,15 +19,25 @@
   for a very long time. -Andre Gide
 </p>
 
-<button (click)=getAnother(input)>Add Your Own</button>
-<input type="text" id="input" [(ngModel)]="input">
+<button class="btn btn-dark" (click)="getAnother(input)">Add Your Own</button>
+<input type="text" id="input" [(ngModel)]="input" />
 <p>Favorite Pokemon</p>
 <div class="container border border-dark">
-  <div class="d-table">
-    <div class="d-table-cell" *ngFor="let pokemon of pokemonList">
-      <img src="{{ pokemon.sprites.front_default }}" alt="" />
-      <p>{{ pokemon.species.name }}</p>
-      <p *ngFor="let type of pokemon.types">{{ type.type.name }}</p>
+  <div class="row">
+    <div
+      class="card inline"
+      style="width: 10rem"
+      *ngFor="let pokemon of pokemonList"
+    >
+      <img
+        class="card-img-top border border-light"
+        src="{{ pokemon.sprites.front_default }}"
+        alt=""
+      />
+      <div class="card-body border border-dark">
+        <p class="card-title">{{ pokemon.species.name }}</p>
+        <p *ngFor="let type of pokemon.types">{{ type.type.name }}</p>
+      </div>
     </div>
   </div>
 </div>
