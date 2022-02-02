@@ -11,6 +11,7 @@ import { MattPageComponent } from './components/matt-page/matt-page.component';
 import { BERHEProfileComponent } from './berhe-profile/berhe-profile.component';
 
 import { MerryComponent } from './components/merry/merry.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { MerryComponent } from './components/merry/merry.component';
     BERHEProfileComponent,
 
     MerryComponent,
+      NavbarComponent,
 
   ],
   imports: [
