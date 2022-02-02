@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
+
 import { BERHEProfileComponent } from './components/berhe-profile/berhe-profile.component';
 import { EdwinComponent } from './components/edwin/edwin.component';
 import { JoelPageComponent } from './components/joel-page/joel-page.component';
